@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Force crystal-clear high contrast for all inputs, textareas, and form fields */
+input, textarea, select {
+  color: #0f172a !important; /* Deep dark slate in light mode - NEVER white */
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+/* In Dark Mode only, invert input text to crisp white on dark slate */
+.dark input, .dark textarea, .dark select {
+  color: #f8fafc !important; /* Pure crisp white text in dark mode */
+  background-color: #0f172a !important; /* Deep slate-900 background in dark mode */
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+@media print {
+  header, footer, button, .print\:hidden {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .border-l-6 {
+    border-left-width: 4px !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Sonia老師的 SQ3R 閱讀筆記智慧診斷儀",
+  "description": "符合 UDL 精神的閱讀理解鷹架，提供 AI 雙向對照診斷、SQ3R 五向度雷達分析與教師示範筆記回饋。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
